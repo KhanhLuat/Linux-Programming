@@ -29,6 +29,6 @@ int main() {
 			on = 1;
 		else 
 			on = 0;
-			usleep(500000);
+			usleep(50000);
 	}
 }
