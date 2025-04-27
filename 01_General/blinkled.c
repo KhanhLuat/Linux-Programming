@@ -6,8 +6,8 @@
 //	See:	
 ////////////////////////////////////////
 #include <stdio.h>
-//#include "CheckFolderBrightness.h"
-//#include "CheckFolderTrigger.h"
+#include "CheckFolderBrightness.h"
+#include "CheckFolderTrigger.h"
 int main() {
 	FILE * trigger[3] = {fopen("/sys/class/leds/beaglebone:green:usr3/trigger", "w"), fopen("/sys/class/leds/beaglebone:green:usr2/trigger", "w"),
 						fopen("/sys/class/leds/beaglebone:green:usr1/trigger", "w")};
