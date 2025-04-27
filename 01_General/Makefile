@@ -1,13 +1,13 @@
 PRJ_NAME := blinkled
 
 CUR_PATH :=.
-BIN_DIR := $(CUR_PATH)/bin 
-INC_DIR := $(CUR_PATH)/inc 
+BIN_DIR := $(CUR_PATH)/bin
+INC_DIR := $(CUR_PATH)/inc
 SRC_DIR := $(CUR_PATH)/src
-OBJ_DIR := $(CUR_PATH)/obj 
-LIB_DIR := $(CUR_PATH)/lib 
+OBJ_DIR := $(CUR_PATH)/obj
+LIB_DIR := $(CUR_PATH)/lib
 
-LIB_SHARE_DIR := $(LIB_DIR)/shared 
+LIB_SHARE_DIR := $(LIB_DIR)/shared
 LIB_STATIC_DIR := $(LIB_DIR)/static
 
 creat_obj:
