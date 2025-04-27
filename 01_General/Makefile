@@ -11,8 +11,8 @@ LIB_SHARE_DIR := $(LIB_DIR)/shared
 LIB_STATIC_DIR := $(LIB_DIR)/static
 
 creat_obj:
-	gcc -c -fPIC $(SRC_DIR)/CheckFolderBrightness.c -o $(OBJ_DIR)/CheckFolderBrightness.o
-	gcc -c -fPIC $(SRC_DIR)/CheckFolderTrigger.c -o $(OBJ_DIR)/CheckFolderTrigger.o
+	gcc -c -fPIC $(SRC_DIR)/CheckFolderBrightness.c -o $(OBJ_DIR)/CheckFolderBrightness.o -I $(INC_DIR)
+	gcc -c -fPIC $(SRC_DIR)/CheckFolderTrigger.c -o $(OBJ_DIR)/CheckFolderTrigger.o -I $(INC_DIR)
 	gcc -c -fPIC $(CUR_PATH)/blinkled.c -o $(OBJ_DIR)/blinkled.o -I $(INC_DIR)
 creat_lib:
 	gcc -shared $(OBJ_DIR)/CheckFolderBrightness.o $(OBJ_DIR)/CheckFolderTrigger.o -o $(LIB_SHARE_DIR)/lib$(PRJ_NAME).so
