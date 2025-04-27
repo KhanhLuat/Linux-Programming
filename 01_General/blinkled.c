@@ -6,8 +6,8 @@
 //	See:	
 ////////////////////////////////////////
 #include <stdio.h>
-//#include <unistd.h>
-
+//#include "CheckFolderBrightness.h"
+//#include "CheckFolderTrigger.h"
 int main() {
 	FILE * trigger[3] = {fopen("/sys/class/leds/beaglebone:green:usr3/trigger", "w"), fopen("/sys/class/leds/beaglebone:green:usr2/trigger", "w"),
 						fopen("/sys/class/leds/beaglebone:green:usr1/trigger", "w")};
@@ -15,14 +15,20 @@ int main() {
 							fopen("/sys/class/leds/beaglebone:green:usr1/brightness", "w")};
 	int on = 0;
 	for(int i =0; i < 3; i++){
-		fprintf(trigger[0], "none\n");
-		fprintf(trigger[1], "none\n");
-		fprintf(trigger[2], "none\n");
+		if(CheckFolderTrigger(trigger[i]) == 1){
+			fprintf(trigger[i], "none\n");
+		}else{
+			;	
+		}
 	}
 	while(1) {
 		for ( int i = 0; i < 3; i++){
-			fprintf(brightness[i], "%d\n", on);
-			fflush(brightness[i]);
+			if(CheckFolderBrightness(brightness[i]) == 1){
+				fprintf(brightness[i], "%d\n", on);
+				fflush(brightness[i]);
+			}else{
+				;	
+			}
 		}
 		if(!on) 
 			on = 1;
