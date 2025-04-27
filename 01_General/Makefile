@@ -1,6 +1,6 @@
 PRJ_NAME := blinkled
 
-CUR_PATH := .
+CUR_PATH :=.
 BIN_DIR := $(CUR_PATH)/bin 
 INC_DIR := $(CUR_PATH)/inc 
 SRC_DIR := $(CUR_PATH)/src
