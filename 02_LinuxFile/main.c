@@ -16,7 +16,7 @@ int main(void){
     numb_write = write(fd, buf1, strlen(buf1));
     printf("Write %d bytes to hello.txt\n", numb_write);
 
-    //lseek(fd, 2, SEEK_SET);
+    lseek(fd, 2, SEEK_SET);
     write(fd, "AAAAAA",strlen("AAAAAA"));
 
     close(fd);
